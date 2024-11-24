@@ -5,12 +5,6 @@ import { OrbitControls } from "@react-three/drei";
 import { Suspense, useRef } from "react";
 import * as THREE from "three";
 
-interface WallInfo {
-  position : [number, number, number],
-  rotation:[number, number, number],
-}
-
-
 export default function Home() {
   return (
     <div style={{ height: "100vh", backgroundColor: "#000" }}>
