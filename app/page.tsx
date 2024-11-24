@@ -1,101 +1,122 @@
-import Image from "next/image";
+'use client';
+
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Suspense, useRef } from "react";
+import * as THREE from "three";
+
+interface WallInfo {
+  position : [number, number, number],
+  rotation:[number, number, number],
+}
+
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div style={{ height: "100vh", backgroundColor: "#000" }}>
+      <Canvas camera={{ position: [0, 3, 10], fov: 75 }}>
+        {/* 카메라 제어 */}
+        <OrbitControls enableZoom={true} maxPolarAngle={Math.PI / 2} />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        {/* 조명 */}
+        <ambientLight intensity={0.3} />
+        <pointLight position={[0, 5, 0]} intensity={1} />
+
+        {/* 장면 */}
+        <Suspense fallback={null}>
+          <Room />
+          <Mobiles />
+        </Suspense>
+      </Canvas>
     </div>
   );
 }
+
+// 방 구성
+const Room = () => {
+  return (
+    <group>
+      {/* 바닥 */}
+      <mesh position={[0, -2, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[15, 15]} />
+        <meshStandardMaterial color="#555" />
+      </mesh>
+
+      {/* 천장 */}
+      <mesh position={[0, 5, 0]} rotation={[Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[15, 15]} />
+        <meshStandardMaterial color="#333" />
+      </mesh>
+
+      {/* 벽 */}
+      {[
+        { position: [0, 0, -7.5], rotation: [0, 0, 0] }, // 뒷벽
+        { position: [0, 0, 7.5], rotation: [0, Math.PI, 0] }, // 앞벽
+        { position: [-7.5, 0, 0], rotation: [0, Math.PI / 2, 0] }, // 왼쪽 벽
+        { position: [7.5, 0, 0], rotation: [0, -Math.PI / 2, 0] }, // 오른쪽 벽
+      ].map((wall, i) => (
+        <mesh key={i} position={wall.position as [number, number,number]} rotation={wall.rotation as [number, number,number]}>
+          <planeGeometry args={[15, 5]} />
+          <meshStandardMaterial color="#777" side={2} />
+        </mesh>
+      ))}
+    </group>
+  );
+};
+
+// 원형으로 배치된 모빌 구성
+const Mobiles = () => {
+  const radius = 5; // 원형 배치 반지름
+  const mobileCount = 8; // 모빌 개수
+  const angleStep = (2 * Math.PI) / mobileCount;
+
+  return (
+    <>
+      {Array.from({ length: mobileCount }).map((_, i) => {
+        const angle = i * angleStep;
+        const x = radius * Math.cos(angle);
+        const z = radius * Math.sin(angle);
+        return <Mobile key={i} position={[x, 3.5, z]} />;
+      })}
+    </>
+  );
+};
+
+// 개별 모빌
+const Mobile: React.FC<{ position: [number, number, number] }> = ({ position }) => {
+  const groupRef = useRef<THREE.Group>(null);
+
+  // 항상 방 중앙을 향하게 회전
+  useFrame(() => {
+    if (groupRef.current) {
+      groupRef.current.lookAt(new THREE.Vector3(0, 3.5, 0)); // 중앙의 고정된 위치를 바라봄
+    }
+  });
+
+  return (
+    <group ref={groupRef} position={position}>
+      {/* 줄 */}
+      <mesh position={[0, -1, 0]}>
+        <cylinderGeometry args={[0.02, 0.02, 2, 16]} />
+        <meshStandardMaterial color="black" />
+      </mesh>
+      {/* 세 개의 2D 액자 */}
+      <group position={[0, -2, 0]}>
+        {Array.from({ length: 3 }).map((_, i) => (
+          <group key={i} position={[0, -i * 0.7, 0]}>
+            {/* 줄에서 액자까지 연결 */}
+            <mesh position={[0, 0.35, 0]}>
+              <cylinderGeometry args={[0.01, 0.01, 0.35, 16]} />
+              <meshStandardMaterial color="black" />
+            </mesh>
+            {/* 액자 */}
+            <mesh>
+              <planeGeometry args={[0.6, 0.4]} />
+              <meshStandardMaterial color={`hsl(${(i + 1) * 60}, 50%, 50%)`} />
+            </mesh>
+          </group>
+        ))}
+      </group>
+    </group>
+  );
+};
