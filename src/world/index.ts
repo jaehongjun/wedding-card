@@ -41,36 +41,36 @@ export default class World {
 	}
 
 	/*
-	* 点击进入展馆后的回调
+	* 클릭하여 전시관에 들어간 후의 콜백
 	* */
 	private _onEnterApp() {
 		this.audio.playAudio();
-		// 进入后才允许控制键盘
+		// 진입 후에야 키보드 컨트롤을 활성화
 		this.core.control_manage.enabled();
 	}
 
 	private async _onLoadModelFinish() {
-		// 场景模型加载完毕后开始加载音频
+		// 장면 모델이 로드 완료된 후 오디오 로드 시작
 		await this.audio.createAudio();
 
-		// 音频加载完毕后移除加载进度UI，显示进入确认UI
+		// 오디오 로드 완료 후 로딩 UI 제거, 진입 확인 UI 표시
 		this.core.ui.removeLoading();
 		this.core.ui.showLoadingConfirm();
 
-		// 场景模型加载完毕后将场景中需要光线投射检测的物体传入给rayCasterControls
+		// 장면 모델 로드 완료 후 장면에서 광선 투사 감지가 필요한 객체를 rayCasterControls에 전달
 		this.ray_caster_controls.bindClickRayCastObj(this.environment.raycast_objects);
 	}
 
 	private _handleLoadProgress([{url, loaded, total}]: [{url: string, loaded: number, total: number}]) {
 		const percentage = ((loaded / total) * 100).toFixed(2);
 		if (/.*\.(blob|glb)$/i.test(url)) {
-			this.core.ui.updateLoadingProgress(`${url.includes("collision") ? "加载碰撞场景模型" : "加载其他场景模型"}：${percentage}%`);
+			this.core.ui.updateLoadingProgress(`${url.includes("collision") ? "충돌 장면 모델 로드 중" : "다른 장면 모델 로드 중"}：${percentage}%`);
 		}
 		if (/.*\.(jpg|png|jpeg)$/i.test(url)) {
-			this.core.ui.updateLoadingProgress("加载图片素材中...");
+			this.core.ui.updateLoadingProgress("이미지 리소스 로드 중...");
 		}
 		if (/.*\.(m4a|mp3)$/i.test(url)) {
-			this.core.ui.updateLoadingProgress("加载声音资源中...");
+			this.core.ui.updateLoadingProgress("오디오 리소스 로드 중...");
 		}
 	}
 
