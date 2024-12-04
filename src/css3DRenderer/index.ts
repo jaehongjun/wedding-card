@@ -37,7 +37,7 @@ export default class Css3DRenderer {
 
 	private _createCssObj() {
 		// Create GL plane
-		const material = new MeshStandardMaterial({color: 0x000000});
+		const material = new MeshStandardMaterial({ color: 0x000000 });
 		material.side = DoubleSide;
 		material.transparent = true;
 		material.opacity = 0;
@@ -48,18 +48,25 @@ export default class Css3DRenderer {
 		mesh.position.set(-15.55, 5.5, 36.33);
 		mesh.rotation.set(0, Math.PI / 2, 0);
 		this.core.scene.add(mesh);
-
-		const iframe = document.createElement("iframe");
-		iframe.src = IFRAME_SRC;
-		iframe.style.width = "1200px";
-		iframe.style.height = "900px";
-		iframe.style.boxSizing = "border-box";
-		iframe.style.opacity = "1";
-
-		const object = new CSS3DObject(iframe);
+	
+		// Create video element
+		const video = document.createElement("video");
+		video.src = "IMG_0409.mov"; // 비디오 소스 경로를 입력하세요.
+		video.style.width = "1200px";
+		video.style.height = "900px";
+		video.style.boxSizing = "border-box";
+		video.style.opacity = "1";
+		video.autoplay = true; // 자동 재생
+		video.loop = true; // 루프 재생
+		video.muted = true; // 음소거
+		video.controls = true; // 컨트롤러 표시 (필요 시)
+	
+		// Create CSS3DObject with video
+		const object = new CSS3DObject(video);
 		object.position.copy(mesh.position);
 		object.rotation.copy(mesh.rotation);
 		object.scale.set(0.002, 0.002, 0.002);
 		this.css_scene.add(object);
 	}
+	
 }

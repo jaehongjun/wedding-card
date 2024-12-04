@@ -8,35 +8,35 @@ export const STATIC_SCENE_URL = new URL("./assets/models/scene_desk_obj.glb", im
 * Texture Resources
 * */
 export const BOARD_TEXTURES = [
-	new URL("./assets/boards/1.png", import.meta.url).href,
-	new URL("./assets/boards/2.png", import.meta.url).href,
-	new URL("./assets/boards/3.jpg", import.meta.url).href,
-	new URL("./assets/boards/4.jpg", import.meta.url).href,
-	new URL("./assets/boards/5.png", import.meta.url).href,
-	new URL("./assets/boards/6.png", import.meta.url).href,
-	new URL("./assets/boards/7.png", import.meta.url).href,
-	new URL("./assets/boards/8.jpg", import.meta.url).href,
-	new URL("./assets/boards/9.jpg", import.meta.url).href,
-	new URL("./assets/boards/10.png", import.meta.url).href
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
+	new URL("./assets/boards/sample.jpeg", import.meta.url).href
 ];
 
 /*
 * Audio Resources
 * */
-export const AUDIO_URL = new URL("./assets/audio/我记得.m4a", import.meta.url).href;
+export const AUDIO_URL = new URL("./assets/audio/Antifreeze.mp3", import.meta.url).href;
 
 /*
 * Intro
 * */
 export const BOARDS_INFO: Record<string, {title: string, author: string, describe: string}> = {
 	1: {
-		title: "《小橘贝》",
-		author: "小雅",
+		title: "후추",
+		author: "후추 author",
 		describe: `
-		它站在画面中央，静静地凝视着观众，柔和的橘色将它的柔软毛发和灵动眼眸妩媚地勾勒出来。<br>
-		小猫的小耳朵微微竖起，似乎在倾听着什么，身体略微前倾，展现出它对周围世界的好奇和敏感。<br>
-		画面的背景色以淡蓝色为主，这种色彩营造了温馨轻柔的氛围，让人仿佛置身于阳光明媚的午后时光中。<br>
-		整个画作细致精致、色彩明亮而温暖，带给人们一种温馨、亲切的感受。
+		후추란 누구인가..<br>
+		후추란 어디서 왔는가..<br>
+		후추 세번째줄..<br>
+		후추추추추<br>
 		`
 	},
 	2: {
