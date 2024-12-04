@@ -41,8 +41,7 @@ export default class Css3DRenderer {
 		material.side = DoubleSide;
 		material.transparent = true;
 		material.opacity = 0;
-		// NoBlending混合模式允许GL平面遮挡CSS平面
-		material.blending = NoBlending;
+		material.blending = NoBlending; // NoBlending混合模式允许GL平面遮挡CSS平面
 		const geometry = new PlaneGeometry(1.5, 1.3);
 		const mesh = new Mesh(geometry, material);
 		mesh.position.set(-15.55, 5.5, 36.33);
@@ -51,7 +50,7 @@ export default class Css3DRenderer {
 	
 		// Create video element
 		const video = document.createElement("video");
-		video.src = "IMG_0409.mov"; // 비디오 소스 경로를 입력하세요.
+		video.src = "IMG_0409.mp4"; // 호환 가능한 비디오 형식 사용
 		video.style.width = "1200px";
 		video.style.height = "900px";
 		video.style.boxSizing = "border-box";
@@ -59,6 +58,7 @@ export default class Css3DRenderer {
 		video.autoplay = true; // 자동 재생
 		video.loop = true; // 루프 재생
 		video.muted = true; // 음소거
+		video.playsInline = true; // iOS에서 전체화면 전환 방지
 		video.controls = true; // 컨트롤러 표시 (필요 시)
 	
 		// Create CSS3DObject with video
@@ -67,6 +67,21 @@ export default class Css3DRenderer {
 		object.rotation.copy(mesh.rotation);
 		object.scale.set(0.002, 0.002, 0.002);
 		this.css_scene.add(object);
+
+		const updateVideoSize = () => {
+			if (window.innerWidth < 600) { // 예: 모바일 화면 너비 기준
+				video.style.width = "600px";
+				video.style.height = "100%";
+				object.scale.set(0.003, 0.004, 0.003);
+			} else {
+				video.style.width = "1200px";
+				video.style.height = "900px";
+				object.scale.set(0.002, 0.002, 0.002);
+			}
+		};
+	
+		updateVideoSize();
+		window.addEventListener('resize', updateVideoSize);
 	}
 	
 }
