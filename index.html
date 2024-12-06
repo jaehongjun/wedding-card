@@ -34,7 +34,12 @@
     <!-- 아래쪽 팝업 툴팁 -->
     <div class="preview-tooltip hide"></div>
     <div class="preview-tips hide">팁: 이 그림을 클릭하여 자세히 볼 수 있습니다.</div>
-
+    <iframe src="Antifreeze.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+      
+      <audio autoplay loop  id="playAudio">
+        <source src="Antifreeze.mp3">
+    </audio>
+    </iframe> 
     <!-- 그림 프레임 상세 정보 -->
     <div class="boards-info" style="visibility: hidden;">
       <div class="boards-container hide">
@@ -53,7 +58,7 @@
     </div>
 
     <!-- 조작 가이드 팝업 -->
-    <div class="help" title="도움말">?</div>
+    <!-- <div class="help" title="도움말">?</div> -->
     <div class="operating-intro display-none">
       <h2>조작 가이드</h2>
       <img class="operating-intro-img" src="/operating.png" alt="">

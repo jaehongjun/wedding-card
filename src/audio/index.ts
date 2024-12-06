@@ -30,6 +30,14 @@ export default class Audio {
 		this.positional_audio.setRefDistance(2);
 		this.positional_audio.setDirectionalCone(180, 230, 0.5);
 		this.positional_audio.setLoop(true);
+		// this.positional_audio.autoplay = true;
+
+		// video.autoplay = true; // 자동 재생
+		// video.loop = true; // 루프 재생
+		// video.muted = true; // 음소거
+		// video.playsInline = true; // iOS에서 전체화면 전환 방지
+		// video.controls = true; // 컨트롤러 표시 (필요 시)
+		
 
 		const helper = new PositionalAudioHelper(this.positional_audio);
 		this.positional_audio.add(helper);
