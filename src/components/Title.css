@@ -1,0 +1,56 @@
+/* Layout 스타일 */
+.layout {
+  width: 70%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* TitleWrapper 스타일 */
+.title-wrapper {
+  width: 100%;
+  text-align: center;
+  padding-top: 42px;
+  font-weight: 500;
+  color: var(--title-color);
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+/* WeddingInvitation 스타일 */
+.wedding-invitation {
+  font-size: 0.825rem;
+  opacity: 0.45;
+  margin-bottom: 16px;
+}
+
+/* GroomBride 스타일 */
+.groom-bride {
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0.9;
+  margin-bottom: 16px;
+}
+
+/* Schedule 스타일 */
+.schedule {
+  font-size: 1.06rem;
+  opacity: 0.65;
+  margin-bottom: 24px;
+}
+
+/* VideoBackground 스타일 */
+.video-background {
+  width: 100%;
+}
+
+/* Fade-in animation */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
