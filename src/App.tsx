@@ -5,7 +5,7 @@ import Greeting from "./components/greeting/Greeting"
 import Location from "./components/location/Location"
 import Quote from "./components/quote/Quote"
 import Share from "./components/share/Share"
-import Title from "./components/Title"
+import Title from "./components/title/Title"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-image-gallery/styles/css/image-gallery.css";

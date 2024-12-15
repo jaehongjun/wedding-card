@@ -4,7 +4,7 @@ import {
   WEDDING_LOCATION,
   GROOM_NAME,
   BRIDE_NAME,
-} from "../Constants";
+} from "../../Constants";
 import "./Title.css"; // CSS 파일 가져오기
 
 const Title = () => {
