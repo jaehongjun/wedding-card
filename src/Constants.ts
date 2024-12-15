@@ -147,3 +147,25 @@ export const ON_HIDE_TOOLTIP = "on-hide-tooltip";
 export const ON_KEY_DOWN = "on-key-down";
 export const ON_KEY_UP = "on-key-up";
 export const ON_ENTER_APP = "on-enter-app";
+
+export const WEDDING_INVITATION_URL = "https://wedding-card-sigma.vercel.app/";
+export const KAKAOTALK_API_TOKEN = "ab5b7945a32938150a52836dd077b6ba";
+export const KAKAOTALK_SHARE_IMAGE =
+  "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg";
+
+export const WEDDING_DATE = "2024 01월 11일, 토요일 오후 18시 00분";
+export const WEDDING_LOCATION = "메리스에이프럴";
+
+export const GROOM_NAME = "전재홍";
+export const GROOM_ACCOUNT_NUMBER = "하나은행 201-910408-34207";
+export const GROOM_FATHER_NAME = "전돈주";
+export const GROOM_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+export const GROOM_MOTHER_NAME = "한명희";
+export const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+
+export const BRIDE_NAME = "장연지";
+export const BRIDE_ACCOUNT_NUMBER = "토스뱅크 1000-1334-4666";
+export const BRIDE_FATHER_NAME = "장경철";
+export const BRIDE_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
+export const BRIDE_MOTHER_NAME = "김희경";
+export const BRIDE_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";

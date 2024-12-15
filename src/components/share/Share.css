@@ -1,0 +1,53 @@
+/* Wrapper 스타일 */
+.share-wrapper {
+  padding-top: 42px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Title 스타일 */
+.share-title {
+  font-size: 1rem;
+  color: var(--title-color);
+  font-weight: bold;
+  opacity: 0.85;
+  margin-bottom: 0;
+}
+
+/* KakaoTalk Share Button 스타일 */
+.kakao-share-button {
+  background: #fee500;
+  border-color: #fee500;
+  color: #181600;
+  width: 100%;
+  margin: 0;
+}
+
+.kakao-share-button:hover {
+  background-color: #fcf07e !important;
+  border-color: #fcf07e !important;
+  color: #17160b !important;
+}
+
+.kakao-share-button:focus {
+  background-color: #fcf07e !important;
+  border-color: #fcf07e !important;
+  color: #17160b !important;
+}
+
+/* Link Share Button 스타일 */
+.link-share-button {
+  background-color: rgba(217, 125, 131, 0.2);
+  border-color: rgba(217, 125, 131, 0.2) !important;
+  color: var(--title-color) !important;
+  font-weight: 400 !important;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.link-share-button:hover {
+  background-color: rgb(217 125 131 / 48%) !important;
+  border-color: rgb(217 125 131 / 48%) !important;
+  color: var(--title-color) !important;
+}
