@@ -1,6 +1,5 @@
 /* Layout 스타일 */
 .layout {
-  width: 70%;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -9,7 +8,6 @@
 .title-wrapper {
   width: 100%;
   text-align: center;
-  padding-top: 42px;
   font-weight: 500;
   color: var(--title-color);
   animation: fadein 3s;
@@ -37,6 +35,7 @@
 .schedule {
   font-size: 1.06rem;
   opacity: 0.65;
+  margin-top: 120px;
   margin-bottom: 24px;
 }
 
@@ -53,4 +52,46 @@
   to {
     opacity: 1;
   }
+}
+
+.names-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.name-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.name-english {
+  font-family: "Playwrite MX Guides", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.name-korean {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  letter-spacing: 0.2em;
+  margin-top: 0.5rem; /* 간격 추가 */
+}
+
+.divider {
+  width: 2px;
+  background-color: #ddd;
+  height: 4rem; /* 적절한 높이 설정 */
+}
+
+.wedding-title {
+  width: 100%;
+  height: 100%;
+  position: relative;;
 }

@@ -1,24 +1,27 @@
 import React from "react";
-import Flower from "../../assets/Sakura_Flower.png";
+import GreyPicture from "../../assets/gray-picture.png";
 import "./Quote.css";
 
 const Quote = () => {
   return (
-    <div className="quote-wrapper">
-      <img src={Flower} alt="flower" className="quote-image" data-aos="fade-up" />
-      <span className="quote-content" data-aos="fade-up">
-        장담하건대. 세상이 다 겨울이어도
-        <br />
-        우리 사랑은 늘봄처럼 따뜻하고
-        <br />
-        간혹, 여름처럼 뜨거울 겁니다
-        <br />
-        <br />
-        - 이수동, (사랑가) -
-        <br />
-        <br />
-      </span>
-    </div>
+      <section
+      id="photo-paragraph-section"
+      className="photo-paragraph-section base-section"
+    >
+      <div className="photo-paragraph-area">
+        <div className="photo-container">
+          <img
+            src={GreyPicture}
+            alt="Background"
+            className="photo-img"
+            draggable="false"
+          />
+        </div>
+        <div className="text-overlay">
+          <p>너를 만난 뒤, 모든 것이 달라졌다.</p> <p>바람은 더 부드럽고, 하늘은 더 푸르렀다.</p> <p>그리고 나는 깨달았다.</p> <p>이것이 사랑이라는 것을.</p> <p>- 정현주, 《사랑이 온다》</p>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -52,7 +52,7 @@ const Location = () => {
 
   return (
     <div className="wrapper">
-      <Divider plain style={{ marginTop: 0, marginBottom: 32 }}>
+      <Divider plain style={{ marginTop: 0, marginBottom: 16 }}>
         <span className="title">오시는 길</span>
       </Divider>
       <img src={Flower} alt="flower" className="image" />
@@ -62,16 +62,22 @@ const Location = () => {
       ></div>
       <p className="content">
         서울 강남구 봉은사로16길 31
+        <br />
+        <br />
         <span className="title">차량 이용시</span>
         <br />
         <br />
-        차량을 가지고 오시면 메리스에이프럴 검색해서 오시면 무료로 발렛서비스를 해 드립니다
+        차량을 가지고 오시면 메리스에이프럴 
+        <br />
+        검색해서 오시면 무료로 발렛서비스를 해 드립니다
         <br />
         <br />
         <span className="title">버스 이용시</span>
         <br />
         <br />
-        신논현역 4번출구 앞 버스정류장에서 셔틀차량이 예식 1시간전부터 예식 시작까지 무료로 운행됩니다.
+        신논현역 4번출구 앞 버스정류장에서 셔틀차량이 
+        <br />
+        예식 1시간전부터 예식 시작까지 무료로 운행됩니다.
         <br />
         <br />
         <span className="title">지하철 이용시</span>

@@ -56,7 +56,7 @@ const Share = () => {
       <Divider
         data-aos="fade-up"
         plain
-        style={{ marginTop: 0, marginBottom: 32 }}
+        style={{ marginTop: 0, marginBottom: 16 }}
       >
         <span className="share-title">청첩장 공유하기</span>
       </Divider>

@@ -157,14 +157,18 @@ export const WEDDING_DATE = "2024 01월 11일, 토요일 오후 18시 00분";
 export const WEDDING_LOCATION = "메리스에이프럴";
 
 export const GROOM_NAME = "전재홍";
+export const GROOM_EN_NAME = "Jeon Jae Hong";
 export const GROOM_ACCOUNT_NUMBER = "하나은행 201-910408-34207";
+export const GROOM_KAKAO_ACCOUNT_NUMBER = "Ej71SAoxJ";
 export const GROOM_FATHER_NAME = "전돈주";
 export const GROOM_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 export const GROOM_MOTHER_NAME = "한명희";
 export const GROOM_MOTHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 
 export const BRIDE_NAME = "장연지";
+export const BRIDE_EN_NAME = "Jang Yeon Ji";
 export const BRIDE_ACCOUNT_NUMBER = "토스뱅크 1000-1334-4666";
+export const BRIDE_KAKAO_ACCOUNT_NUMBER = "Ej8V8qvyT";
 export const BRIDE_FATHER_NAME = "장경철";
 export const BRIDE_FATHER_ACCOUNT_NUMBER = "○○은행 ***-***-******";
 export const BRIDE_MOTHER_NAME = "김희경";

@@ -9,6 +9,7 @@ import Title from "./components/title/Title"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "react-image-gallery/styles/css/image-gallery.css";
+import FloatingButton from "./components/FloatingButton"
 
 export const App = () => {
     useEffect(() => {
@@ -28,7 +29,7 @@ export const App = () => {
         });
       });
 
-    return <div className="wrapper">
+    return <div className="">
         <Title />
         <Greeting />
         <Gallery />
@@ -36,6 +37,6 @@ export const App = () => {
       <Quote />
       <CongratulatoryMoney />
       <Share />
-      <a href="/three.html">three.js</a>
+      <FloatingButton />
     </div>
 }
