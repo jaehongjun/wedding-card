@@ -41,9 +41,9 @@ const Title = () => {
     <AnimatedWaves />
     <img src={WeddingTitleImage} alt="wedding_title" className="wedding-title" />
         <p className="schedule">
-          {WEDDING_DATE}
+          <b>{WEDDING_DATE}</b>
           <br />
-          {WEDDING_TIME}
+          <b>{WEDDING_TIME}</b>
           <br />
           <br />
           {WEDDING_LOCATION}
