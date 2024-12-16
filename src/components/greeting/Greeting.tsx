@@ -10,10 +10,12 @@ import {
 } from "../../Constants";
 import Flower from "../../assets/Sakura_Flower.png";
 import "./Greeting.css";
+import FlowerAnimation from "../FlowerAnimation";
 
 const Greeting = () => {
   return (
     <div className="wrapper">
+      <FlowerAnimation/>
       <Divider style={{ marginTop: 16, marginBottom: 16 }} plain>
         <p className="title" data-aos="fade-up">초대합니다</p>
       </Divider>

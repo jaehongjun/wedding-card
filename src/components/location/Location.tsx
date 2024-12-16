@@ -46,15 +46,17 @@ const Location = () => {
         <span className="title">오시는 길</span>
       </Divider>
       <img src={Flower} alt="flower" className="image" />
+      <p className="content">
+        서울 강남구 봉은사로16길 31
+        <br />
+        메리스에이프럴 
+      </p>
       <div
       id="daumRoughmapContainer1734356241082"
       className="root_daum_roughmap root_daum_roughmap_landing"
       style={{ width: '100%', height: '360px' }}
     ></div>
-      <p className="content">
-        서울 강남구 봉은사로16길 31
-        <br />
-        <br />
+      <p className="content" style={{paddingTop:'42px'}}>
         <span className="title">차량 이용시</span>
         <br />
         <br />

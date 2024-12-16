@@ -11,6 +11,8 @@ import GalleryPhoto4 from "../../assets/finger-combi.jpeg";
 import GalleryPhoto5 from "../../assets/sunset.jpeg";
 import GalleryPhoto6 from "../../assets/tree.jpeg";
 import TDGalleryButton from "../TDGalleryButton";
+import { Button } from "@headlessui/react";
+import EnterButton from "../EnterButton";
 
 const images = [
   {
@@ -50,13 +52,14 @@ const Gallery = () => {
         showFullscreenButton={false}
         items={images}
       />
-      <div style={{marginTop:'20px',
-         width:'100%', alignItems:'center'
+      <div className="bg-pattern" style={{marginTop:'20px',
+         width:'100%', justifyItems:'center'
       }}>
-        <div style={{border:'1px solid #f0f0f0', borderRadius:'5px',display:'flex', flexDirection:'row', justifyContent:'center',  paddingBottom:'20px', paddingTop:'20px',}}>
-          <TDGalleryButton/>
-          <div style={{marginLeft:'5px'}}>3D 사진관 보러가기</div>
-        </div>
+          <Button type="button" style={{paddingLeft:'20px',paddingRight:'20px', borderRadius:'35px',display:'flex', flexDirection:'row', justifyContent:'center',  paddingBottom:'15px', paddingTop:'15px', background:'ghostwhite'}}>
+            <TDGalleryButton/>
+            <div className="show3d">3D 사진관 보러가기 </div>
+            <EnterButton/>
+          </Button>
       </div>
     </div>
   );
