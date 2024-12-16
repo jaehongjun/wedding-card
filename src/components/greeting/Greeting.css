@@ -22,8 +22,10 @@
 }
 
 .groom-bride {
-  font-size: 0.875rem;
-  line-height: 1.75;
+  font-family: "Noto Serif KR", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
   opacity: 0.85;
   margin-bottom: 0px;
   width: 100%;

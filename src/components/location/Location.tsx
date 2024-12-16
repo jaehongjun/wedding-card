@@ -4,50 +4,40 @@ import Flower from "../../assets/Sakura_Flower.png";
 import "./Location.css";
 
 const Location = () => {
-  // 카카오 맵 불러오기
-  const executeScript = () => {
-    const scriptTag = document.createElement("script");
-    const inlineScript = document.createTextNode(`new daum.roughmap.Lander({
-		"timestamp" : "1734281865977",
-		"key" : "2mi7z",
-		"mapWidth" : "360",
-		"mapHeight" : "240"
-	}).render();`);
-    scriptTag.appendChild(inlineScript);
-    document.body.appendChild(scriptTag);
-  };
-
-  const InstallScript = () => {
-    (function () {
-      let c = window.location.protocol === "https:" ? "https:" : "http:";
-      let a = "16137cec";
-
-      if (window.daum && window.daum.roughmap && window.daum.roughmap.cdn) {
-        return;
-      }
-      window.daum = window.daum || {};
-      window.daum.roughmap = {
-        cdn: a,
-        URL_KEY_DATA_LOAD_PRE: c + "//t1.daumcdn.net/roughmap/",
-        url_protocal: c,
-      };
-      let b =
-        c +
-        "//t1.daumcdn.net/kakaomapweb/place/jscss/roughmap/" +
-        a +
-        "/roughmapLander.js";
-
-      const scriptTag = document.createElement("script");
-      scriptTag.src = b;
-      document.body.append(scriptTag);
-      scriptTag.onload = () => {
-        executeScript();
-      };
-    })();
-  };
-
   useEffect(() => {
-    InstallScript();
+    // 스크립트가 이미 로드되었는지 확인
+    const existingScript = document.querySelector(
+      'script[src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"]'
+    );
+
+    if (!existingScript) {
+      // 스크립트 생성
+      const script = document.createElement('script');
+      script.src = 'https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js';
+      script.charset = 'UTF-8';
+      script.className = 'daum_roughmap_loader_script';
+      document.body.appendChild(script);
+
+      script.onload = () => {
+        initializeMap();
+      };
+    } else {
+      // 스크립트가 이미 로드된 경우 바로 초기화
+      initializeMap();
+    }
+
+    function initializeMap() {
+      if (window.daum && window.daum.roughmap && window.daum.roughmap.Lander) {
+        new window.daum.roughmap.Lander({
+          timestamp: '1734356241082',
+          key: '2mii6',
+          // mapWidth: '640',
+          mapHeight: '360',
+        }).render();
+      } else {
+        console.error('다음 맵 로더를 찾을 수 없습니다.');
+      }
+    }
   }, []);
 
   return (
@@ -57,9 +47,10 @@ const Location = () => {
       </Divider>
       <img src={Flower} alt="flower" className="image" />
       <div
-        id="daumRoughmapContainer1652464367301"
-        className="map"
-      ></div>
+      id="daumRoughmapContainer1734356241082"
+      className="root_daum_roughmap root_daum_roughmap_landing"
+      style={{ width: '100%', height: '360px' }}
+    ></div>
       <p className="content">
         서울 강남구 봉은사로16길 31
         <br />

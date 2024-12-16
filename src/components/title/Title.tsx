@@ -6,11 +6,12 @@ import {
   BRIDE_NAME,
   BRIDE_EN_NAME,
   GROOM_EN_NAME,
+  WEDDING_TIME,
 } from "../../Constants";
 import "./Title.css"; // CSS 파일 가져오기
 import AnimatedWaves from "../wave";
 import AnimatedWavesDown from "../waveDown";
-import WeddingTitleImage from "../../assets/image.png";
+import WeddingTitleImage from "../../assets/image1.png";
 
 const Title = () => {
   return (
@@ -40,6 +41,9 @@ const Title = () => {
     <img src={WeddingTitleImage} alt="wedding_title" className="wedding-title" />
         <p className="schedule">
           {WEDDING_DATE}
+          <br />
+          {WEDDING_TIME}
+          <br />
           <br />
           {WEDDING_LOCATION}
         </p>

@@ -153,7 +153,8 @@ export const KAKAOTALK_API_TOKEN = "ab5b7945a32938150a52836dd077b6ba";
 export const KAKAOTALK_SHARE_IMAGE =
   "https://cdn.pixabay.com/photo/2014/11/13/17/04/heart-529607_960_720.jpg";
 
-export const WEDDING_DATE = "2024 01월 11일, 토요일 오후 18시 00분";
+export const WEDDING_DATE = "2025년 1월 11일";
+export const WEDDING_TIME = "토요일 오후 6시";
 export const WEDDING_LOCATION = "메리스에이프럴";
 
 export const GROOM_NAME = "전재홍";
