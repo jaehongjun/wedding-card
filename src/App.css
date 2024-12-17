@@ -73,4 +73,6 @@
     background: #efebe9;
     background-image: url("../../assets/GroovePaper.png");
     width: 100%;
+    min-height: 100vh;
+    padding-bottom: env(safe-area-inset-bottom);
 }

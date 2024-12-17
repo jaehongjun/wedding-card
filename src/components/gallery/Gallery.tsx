@@ -18,26 +18,32 @@ const images = [
   {
     original: GalleryPhoto1,
     thumbnail: GalleryPhoto1,
+    originalHeight:400
   },
   {
     original: GalleryPhoto2,
     thumbnail: GalleryPhoto2,
+    originalHeight:400
   },
   {
     original: GalleryPhoto3,
     thumbnail: GalleryPhoto3,
+    originalHeight:400
   },
   {
     original: GalleryPhoto4,
     thumbnail: GalleryPhoto4,
+    originalHeight:400
   },
   {
     original: GalleryPhoto5,
     thumbnail: GalleryPhoto5,
+    originalHeight:400
   },
   {
     original: GalleryPhoto6,
     thumbnail: GalleryPhoto6,
+    originalHeight:400
   },
 ];
 
@@ -51,6 +57,7 @@ const Gallery = () => {
         showPlayButton={false}
         showFullscreenButton={false}
         items={images}
+
       />
       <div className="bg-pattern" style={{marginTop:'20px',
          width:'100%', justifyItems:'center'

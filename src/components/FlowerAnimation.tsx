@@ -18,7 +18,7 @@ const FlowerAnimation = () => {
     }
 
     // 꽃 모양의 파티클 생성
-    const flowerCount = 100;
+    const flowerCount = 200;
     const geometry = new THREE.BufferGeometry();
     const positions = [];
 

@@ -11,7 +11,7 @@ import {
 import "./Title.css"; // CSS 파일 가져오기
 import AnimatedWaves from "../wave";
 import AnimatedWavesDown from "../waveDown";
-import WeddingTitleImage from "../../assets/image1.png";
+import WeddingTitleImage from "../../assets/title-full.png";
 import FlowerAnimation from "../FlowerAnimation";
 
 const Title = () => {
