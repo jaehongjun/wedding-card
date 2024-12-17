@@ -48,6 +48,10 @@ const images = [
 ];
 
 const Gallery = () => {
+  const onMoveGallery = () => {
+    window.open("/three.html", "_blank");
+  }
+  
   return (
     <div className="gallery-wrapper">
       <Divider style={{ marginTop: 0, marginBottom: 16 }} plain>
@@ -62,7 +66,7 @@ const Gallery = () => {
       <div className="bg-pattern" style={{marginTop:'20px',
          width:'100%', justifyItems:'center'
       }}>
-          <Button type="button" style={{paddingLeft:'20px',paddingRight:'20px', borderRadius:'35px',display:'flex', flexDirection:'row', justifyContent:'center',  paddingBottom:'15px', paddingTop:'15px', background:'ghostwhite'}}>
+          <Button type="button" style={{paddingLeft:'20px',paddingRight:'20px', borderRadius:'35px',display:'flex', flexDirection:'row', justifyContent:'center',  paddingBottom:'15px', paddingTop:'15px', background:'ghostwhite'}} onClick={onMoveGallery}>
             <TDGalleryButton/>
             <div className="show3d">3D 사진관 보러가기 </div>
             <EnterButton/>
