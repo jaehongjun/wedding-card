@@ -43,11 +43,17 @@ const CongratulatoryMoney = () => {
         plain
         style={{ marginTop: 0, marginBottom: 16 }}
       >
-        <p className="title">축하의 마음을 전하세요</p>
+        <p className="title">마음 전하실 곳</p>
       </Divider>
       <img src={Flower} alt="flower" className="image" />
       <p className="content" data-aos="fade-up">
-        축하의 마음을 담아 축의금을 전달해 보세요.
+        <br/>직접 축하를 전하지 못하는 분들을 위해 
+        <br/>계좌번호를 안내해 드립니다.
+
+        <br/>여러분의 소중한 마음을 간직하며, 
+        <br/>행복한 부부로 보답하겠습니다.
+
+        <br/>너그러운 양해 부탁드립니다.
       </p>
 
     <div>

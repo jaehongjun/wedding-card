@@ -1,5 +1,5 @@
 import React from "react";
-import GreyPicture from "../../assets/gray-picture.png";
+import GreyPicture from "../../assets/gray-picture.jpeg";
 import "./Quote.css";
 
 const Quote = () => {
