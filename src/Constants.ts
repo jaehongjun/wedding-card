@@ -8,16 +8,16 @@ export const STATIC_SCENE_URL = new URL("./assets/models/scene_desk_obj.glb", im
 * Texture Resources
 * */
 export const BOARD_TEXTURES = [
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href,
-	new URL("./assets/boards/sample.jpeg", import.meta.url).href
+	new URL("./assets/boards/0-1.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-2.jpg", import.meta.url).href,
+	new URL("./assets/boards/0-3.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-4.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-5.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-6.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-7.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-8.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-9.jpeg", import.meta.url).href,
+	new URL("./assets/boards/0-10.jpeg", import.meta.url).href
 ];
 
 /*
@@ -30,103 +30,87 @@ export const AUDIO_URL = new URL("./assets/audio/Antifreeze.mp3", import.meta.ur
 * */
 export const BOARDS_INFO: Record<string, {title: string, author: string, describe: string}> = {
 	1: {
-		title: "후추",
-		author: "후추 author",
+		title: "좌재홍",
+		author: "장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+			고요한 숲속 풍경 속에서 쓰러진 나무에 발을 올리고 장난스러운 포즈를 취한 인물이 돋보인다.<br>
+			나무 사이로 스며든 햇빛이 숲의 고요함과 자연의 따뜻함을 부드럽게 비춘다.<br>
+			유쾌함과 자연의 평온함이 조화를 이루는 순간이다.<br>
 		`
 	},
 	2: {
-		title: "후추",
-		author: "후추 author",
+		title: "엘레베이터 안에서 우린 사랑을 나눴지🛗",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		엘리베이터 안에서 포착된 두 사람의 다양한 표정과 장난기 가득한 포즈가 돋보이는 사진이다.<br>
+		노란 테이프 라벨이 프레임을 감싸며, 유쾌하고 캐주얼한 분위기를 더한다.<br>
+		소중한 순간을 기록한 셀프 포토의 생동감과 웃음이 가득한 장면이다.<br>
 		`
 	},
 	3: {
-		title: "후추",
-		author: "후추 author",
+		title: "우연지",
+		author: "전재홍",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+			고요한 숲속 풍경 속에서 쓰러진 나무에 발을 올리고 장난스러운 포즈를 취한 인물이 돋보인다.<br>
+			나무 사이로 스며든 햇빛이 숲의 고요함과 자연의 따뜻함을 부드럽게 비춘다.<br>
+			유쾌함과 자연의 평온함이 조화를 이루는 순간이다.<br>
 		`
 	},
 	4: {
-		title: "후추",
-		author: "후추 author",
+		title: "마테호른 호수🚤",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+			마테호른의 웅장한 자태가 고요한 호수에 그대로 반영된 장엄한 풍경 속 두 사람의 모습이 따뜻함을 더한다.<br>
+			맑은 하늘과 눈 덮인 산봉우리가 어우러지며 자연의 경이로움이 돋보이는 순간이다.<br>
+			마테호른 호수 앞에서 나눈 소박한 대화와 행복이 고스란히 담긴 장면이다.<br>
 		`
 	},
 	5: {
-		title: "후추",
-		author: "후추 author",
+		title: "몽마르트 언덕에서🗻",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+			프랑스 몽마르트 언덕에서 내려다본 아름다운 도시의 야경과 그 순간을 함께하는 두 사람의 뒷모습이 정겹다.<br>
+			깊은 밤하늘과 반짝이는 불빛들이 어우러져 파리의 낭만적인 분위기를 한껏 담아낸 장면이다.<br>
 		`
 	},
 	6: {
-		title: "후추",
-		author: "후추 author",
+		title: "부산 아쿠아리움🐠",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		부산 아쿠아리움의 푸른 바다 속을 배경으로 두 사람의 귀여운 셀카가 눈길을 끈다.<br>
+		뒤로 헤엄치는 물고기들과 푸른 빛이 어우러져 마치 바닷속에 있는 듯한 신비로운 분위기를 자아낸다.<br>		
 		`
 	},
 	7: {
-		title: "후추",
-		author: "후추 author",
+		title: "대기하면서 사진한장📸",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		푸른 배경 앞에서 편안하게 앉아 기다리는 두 사람의 모습이 담겼다.<br>
+		자연스러운 표정과 미소가 소소하지만 따뜻한 일상의 순간을 보여준다.<br>
 		`
 	},
 	8: {
-		title: "후추",
-		author: "후추 author",
+		title: "💒웨딩사진💒",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		화려한 꽃으로 장식된 아치 아래, 신부의 순백 드레스와 신랑의 단정한 수트가 어우러진 아름다운 웨딩 포트레이트.<br>
+		행복이 가득한 표정과 따뜻한 분위기가 두 사람의 사랑스러운 순간을 완성한다.<br>
 		`
 	},
 	9: {
-		title: "후추",
-		author: "후추 author",
+		title: "부산 용궁사🐉",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		푸른 바다와 절벽 위에 자리한 부산 용궁사의 아름다운 풍경을 배경으로 찍은 두 사람의 셀카.<br>
+		맑은 하늘과 해안선이 어우러진 이곳은 자연과 전통이 함께 어우러지는 특별한 순간을 선사한다.<br>
 		`
 	},
 	10: {
-		title: "후추",
-		author: "후추 author",
+		title: "💒웨딩사진💒",
+		author: "전재홍·장연지",
 		describe: `
-		후추란 누구인가..<br>
-		후추란 어디서 왔는가..<br>
-		후추 세번째줄..<br>
-		후추추추추<br>
+		흑백의 감성으로 담아낸 우아한 웨딩 사진. 신랑과 신부의 자연스러운 표정과 손을 꼭 잡은 모습이 사랑과 신뢰를 상징한다.<br>
+세련된 배경과 조화로운 의상이 두 사람의 행복한 순간을 더욱 돋보이게 한다.<br>
 		`
 	}
 };
