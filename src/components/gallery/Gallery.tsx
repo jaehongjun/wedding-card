@@ -10,11 +10,41 @@ import GalleryPhoto3 from "../../assets/busan-code.jpeg";
 import GalleryPhoto4 from "../../assets/finger-combi.jpeg";
 import GalleryPhoto5 from "../../assets/sunset.jpeg";
 import GalleryPhoto6 from "../../assets/tree.jpeg";
+import GalleryPhoto7 from "../../assets/boards/0-8.jpeg";
+import GalleryPhoto8 from "../../assets/boards/0-10.jpeg";
+import GalleryPhoto9 from "../../assets/gray-picture.jpeg";
+import GalleryPhoto10 from "../../assets/suiss-pick.jpeg";
+import GalleryPhoto11 from "../../assets/backhug.jpeg";
 import TDGalleryButton from "../TDGalleryButton";
 import { Button } from "@headlessui/react";
 import EnterButton from "../EnterButton";
 
 const images = [
+  {
+    original: GalleryPhoto7,
+    thumbnail: GalleryPhoto7,
+    originalHeight:400
+  },
+  {
+    original: GalleryPhoto11,
+    thumbnail: GalleryPhoto11,
+    originalHeight:400
+  },
+  {
+    original: GalleryPhoto8,
+    thumbnail: GalleryPhoto8,
+    originalHeight:400
+  },
+  {
+    original: GalleryPhoto9,
+    thumbnail: GalleryPhoto9,
+    originalHeight:400
+  },
+  {
+    original: GalleryPhoto10,
+    thumbnail: GalleryPhoto10,
+    originalHeight:400
+  },
   {
     original: GalleryPhoto1,
     thumbnail: GalleryPhoto1,
