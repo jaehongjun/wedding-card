@@ -38,7 +38,7 @@ export const BOARDS_INFO: Record<string, {title: string, author: string, describ
 			유쾌함과 자연의 평온함이 조화를 이루는 순간이다.<br>
 		`
 	},
-	2: {
+	3: {
 		title: "엘레베이터 안에서 우린 사랑을 나눴지🛗",
 		author: "전재홍·장연지",
 		describe: `
@@ -47,13 +47,13 @@ export const BOARDS_INFO: Record<string, {title: string, author: string, describ
 		소중한 순간을 기록한 셀프 포토의 생동감과 웃음이 가득한 장면이다.<br>
 		`
 	},
-	3: {
+	2: {
 		title: "우연지",
 		author: "전재홍",
 		describe: `
-			고요한 숲속 풍경 속에서 쓰러진 나무에 발을 올리고 장난스러운 포즈를 취한 인물이 돋보인다.<br>
-			나무 사이로 스며든 햇빛이 숲의 고요함과 자연의 따뜻함을 부드럽게 비춘다.<br>
-			유쾌함과 자연의 평온함이 조화를 이루는 순간이다.<br>
+		고요한 숲속 풍경 속에서 쓰러진 나무에 발을 올리고 장난스러운 포즈를 취한 인물이 돋보인다.<br>
+		나무 사이로 스며든 햇빛이 숲의 고요함과 자연의 따뜻함을 부드럽게 비춘다.<br>
+		유쾌함과 자연의 평온함이 조화를 이루는 순간이다.<br>
 		`
 	},
 	4: {
