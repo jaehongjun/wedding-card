@@ -39,9 +39,9 @@ const Greeting = () => {
       소중한 발걸음을 함께해 주시면 감사하겠습니다.
       </p>
       <p className="groom-bride" data-aos="fade-up">
-        {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 아들 {GROOM_NAME.substring(1)}
+        {GROOM_FATHER_NAME} · {GROOM_MOTHER_NAME}의 <span style={{display:'inline-block', textAlign:'right', width:'48px'}}>아들</span> {GROOM_NAME.substring(1)}
         <br />
-        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 &nbsp;&nbsp;딸 {BRIDE_NAME.substring(1)}
+        {BRIDE_FATHER_NAME} · {BRIDE_MOTHER_NAME}의 <span style={{display:'inline-block', textAlign:'right', width:'48px'}}>딸</span> {BRIDE_NAME.substring(1)}
       </p>
     </div>
   );

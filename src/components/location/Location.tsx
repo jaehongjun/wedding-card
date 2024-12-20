@@ -60,7 +60,7 @@ const Location = () => {
         <span className="title">차량 이용시</span>
         <br />
         <br />
-        차량을 가지고 오시면 메리스에이프럴 
+        자가 운전 시 '메리스에이프럴' 을
         <br />
         검색해서 오시면 무료로 발렛서비스를 해 드립니다
         <br />
