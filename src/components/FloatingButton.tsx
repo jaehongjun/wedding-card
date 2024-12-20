@@ -23,7 +23,7 @@ const FloatingButton = () => {
             onClick={onMobilePhotoClick}
             className="floating-button"
           >
-            모바일 사진관
+            3D 모바일 사진관
           </button>
         </Transition>
       </div>
